@@ -1,0 +1,5 @@
+# Maven wrapper script - must use Unix line endings (LF) to work on Linux/macOS
+/mvnw text eol=lf
+
+# Windows batch files - must use Windows line endings (CRLF) to execute properly
+*.cmd text eol=crlf
