@@ -9,18 +9,18 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class KafkaConfig {
+public class KafkaAdminClientConfig {
 
-    private final KafkaProperties kafkaProperties;
+    private final KafkaCommonProperties kafkaCommonProperties;
 
-    public KafkaConfig(KafkaProperties kafkaProperties) {
-        this.kafkaProperties = kafkaProperties;
+    public KafkaAdminClientConfig(KafkaCommonProperties kafkaCommonProperties) {
+        this.kafkaCommonProperties = kafkaCommonProperties;
     }
 
     @Bean
     public AdminClient adminClient() {
         Map<String, Object> configs = new HashMap<>();
-        configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaProperties.getBootstrapServers());
+        configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaCommonProperties.getBootstrapServers());
         return AdminClient.create(configs);
     }
 }

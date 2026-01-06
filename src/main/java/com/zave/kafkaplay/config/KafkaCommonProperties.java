@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ConfigurationProperties(prefix = "kafka")
-public class KafkaProperties {
+public class KafkaCommonProperties {
 
     private String bootstrapServers;
 
