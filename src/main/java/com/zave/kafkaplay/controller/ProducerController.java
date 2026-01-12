@@ -44,7 +44,7 @@ public class ProducerController {
         try {
             kafkaProducerService.produce(recordInfos);
 
-            return ResponseEntity.ok(Map.of(
+        return ResponseEntity.ok(Map.of(
                 "message", "Records sent successfully"
             ));
         } catch (Exception e) {

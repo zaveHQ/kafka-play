@@ -36,7 +36,7 @@ public class RecordInfo {
         return partition;
     }
 
-    public void setPartition(Integer partition) {
+    public void setPartition(int partition) {
         this.partition = partition;
     }
 
