@@ -6,7 +6,6 @@ import org.apache.kafka.clients.admin.TopicDescription;
 import org.apache.kafka.common.TopicPartitionInfo;
 
 public class TopicInfo {
-
     private String topicName;
     private int partitionCount;
     private int replicationFactor;
@@ -24,9 +23,9 @@ public class TopicInfo {
                 .toList();
     }
 
-    public TopicInfo(String name, int partitions, int replicationFactor) {
-        this.topicName = name;
-        this.partitionCount = partitions;
+    public TopicInfo(String topicName, int partitionCount, int replicationFactor) {
+        this.topicName = topicName;
+        this.partitionCount = partitionCount;
         this.replicationFactor = replicationFactor;
     }
 
